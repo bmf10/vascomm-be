@@ -9,7 +9,7 @@ import cors from 'cors'
 dotenv.config()
 
 const app: Express = express()
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 3000
 
 app.use(async (_req, _res, next) => {
   await db.sequelize.authenticate()
