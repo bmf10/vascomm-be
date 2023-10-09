@@ -5,8 +5,8 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc",
-    "start": "node index.js",
+    "build": "tsc",
+    "start": "node dist/index.js",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q  dist/index.js\"",
     "prettier:fix": "prettier --write .",
     "migrate": "sequelize db:migrate",
@@ -15,7 +15,8 @@
     "seed": "sequelize db:seed:all",
     "seed:reset": "sequelize db:seed:undo:all",
     "seed:reset:latest": "sequelize db:seed:undo",
-    "cleanUp": "rm -rf dist"
+    "cleanUp": "rm -rf dist",
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "",
