@@ -15,8 +15,7 @@
     "seed": "sequelize db:seed:all",
     "seed:reset": "sequelize db:seed:undo:all",
     "seed:reset:latest": "sequelize db:seed:undo",
-    "cleanUp": "rm -rf dist",
-    "postinstall": "npm run build"
+    "cleanUp": "rm -rf dist"
   },
   "keywords": [],
   "author": "",
