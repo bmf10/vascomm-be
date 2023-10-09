@@ -28,13 +28,13 @@ const requestHandler: RequestHandler = async (req, res, next) => {
     await save({ key: filename, body: buffer })
     const image = filename
 
-    const classroom = await Product.create({
+    const product = await Product.create({
       id: nanoid(),
       ...body,
       image,
     })
 
-    return res.json(successResponse(await classroom.toJSON()))
+    return res.json(successResponse(await product.toJSON()))
   } catch (error) {
     next(error)
   }
